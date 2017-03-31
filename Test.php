@@ -1,29 +1,29 @@
 <?php
 
-include_once __DIR__ . "/Operation/Connection.php";
+include_once "EntityManager.php";
 
-
-use DatamapperTest\Operation\Connection;
-
-$connection  = Connection::getInstance();
-$prepare = $connection->prepare("select * from estado");
-$prepare->execute();
+use DatamapperTest\EntityManager;
 
 class Estado
 {
-    private $id_estado;
+    private $idestado;
     private $estado;
 
     public function getIdEstado()
     {
-        return $this->id_estado;
+        return $this->idestado;
     }
 
     public function setIdEstado($id)
     {
-        $this->id_estado = $id;
+        $this->idestado = $id;
     }
 }
 
-//$em = new EntityManager();
-//$em->find(Estado);
+$em = new EntityManager();
+$results = $em->find(Estado::class);
+
+echo "<h1>Estados</h1> <br>";
+foreach ($results as $result) {
+    echo "Identificacion ", $result["idestado"], " Tipo : " . $result["estado"] . "<br>";
+}
