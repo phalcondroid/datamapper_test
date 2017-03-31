@@ -1,8 +1,8 @@
 # Datamapper Test
 
-### Install
+## Install
 
-# Clone this repository in htdocs or root php folder
+#### Clone this repository in htdocs or root php folder
 
 ```
 
