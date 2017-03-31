@@ -13,9 +13,9 @@ cd datamapper_test
 
 #### to download the changes
 
-´´´
+```
 git pull
-´´´
+
 
 #### to upload the changes
 
